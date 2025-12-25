@@ -3,19 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anu P Kumar | Github </title>
+    <title>ak - Applied AI </title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --bg-primary: #ffffff;
-            --text-primary: #1a1a1a;
-            --text-secondary: #666666;
-            --accent: #0066cc;
-            --border-color: #e0e0e0;
-        }
-
         * {
             margin: 0;
             padding: 0;
@@ -24,345 +16,279 @@
 
         body {
             font-family: 'Crimson Pro', serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            line-height: 1.7;
-            overflow-x: hidden;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #fff;
+            height: 100vh;
+            overflow: hidden;
         }
 
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            position: relative;
-            z-index: 1;
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 40px;
+            border-bottom: 1px solid #e0e0e0;
         }
 
-        /* Hero Section */
-        header {
-            padding: 6rem 0 4rem;
+        .name-section {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
         }
 
-        .hero-badge {
-            display: inline-block;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--text-secondary);
-            border: 1px solid var(--border-color);
-            padding: 0.4rem 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        h1 {
-            font-family: 'Crimson Pro', serif;
-            font-size: 3.5rem;
+        .name {
+            font-size: 2.5rem;
             font-weight: 600;
-            line-height: 1.2;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
+            color: #1a1a1a;
+            line-height: 1;
         }
 
-        .tagline {
-            font-size: 1.3rem;
-            color: var(--text-secondary);
-            max-width: 700px;
-            margin-bottom: 3rem;
+        .subtitle {
+            font-size: 0.85rem;
+            color: #666;
             font-weight: 400;
         }
 
-        .tagline strong {
-            color: var(--text-primary);
-            font-weight: 600;
-        }
-
-        /* Projects Section */
-        .projects-header {
-            margin-bottom: 3rem;
-        }
-
-        .projects-header h2 {
+        .contact {
+            display: flex;
+            gap: 20px;
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--text-secondary);
-            margin-bottom: 0.5rem;
+            font-size: 0.8rem;
         }
 
-        .projects-count {
-            font-size: 1.5rem;
-            color: var(--text-primary);
-            font-family: 'JetBrains Mono', monospace;
+        .contact a {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.2s;
         }
 
-        /* Project Cards */
-        .projects-list {
+        .contact a:hover {
+            color: #2c3e50;
+        }
+
+        .main-content {
+            display: flex;
+            height: calc(100vh - 110px);
+            padding: 40px;
+            gap: 30px;
+        }
+
+        .left-column {
+            flex: 0 0 65%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 20px;
+            height: 100%;
+        }
+
+        .right-column {
+            flex: 0 0 35%;
             display: flex;
             flex-direction: column;
-            gap: 0;
-            margin-bottom: 6rem;
+            gap: 20px;
+            height: 100%;
         }
 
-        .project-card {
-            border-bottom: 1px solid var(--border-color);
-            padding: 2rem 0;
-            transition: all 0.2s ease;
+        .right-column .project {
+            flex: 1;
         }
 
-        .project-card:hover {
-            padding-left: 1rem;
+        .project {
+            border: 1px solid #e0e0e0;
+            padding: 20px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
         }
 
-        .project-number {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.7rem;
-            color: var(--text-secondary);
-            margin-bottom: 0.5rem;
+        .project:hover {
+            border-color: #999;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
 
-        .project-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 0.8rem;
-            color: var(--text-primary);
-            font-weight: 600;
+        .project h2 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #1a1a1a;
         }
 
-        .project-card p {
-            color: var(--text-secondary);
-            margin-bottom: 1rem;
-            font-size: 1rem;
-            line-height: 1.6;
+        .project-description {
+            margin-bottom: 12px;
+            color: #555;
+            font-size: 0.85rem;
+            flex-grow: 1;
         }
 
         .tech-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
+            gap: 6px;
+            margin-bottom: 12px;
         }
 
         .tag {
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.65rem;
-            padding: 0.3rem 0.7rem;
+            padding: 3px 8px;
             background: #f5f5f5;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            color: #555;
+            border: 1px solid #ddd;
         }
 
-        .tag.pharma {
-            background: #f5f5f5;
-            color: var(--text-secondary);
-        }
-
-        .tag.ml {
-            background: #f5f5f5;
-            color: var(--text-secondary);
-        }
-
-        .view-details {
+        .project-link {
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.75rem;
-            color: var(--accent);
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .view-details:hover {
-            text-decoration: underline;
-        }
-
-        /* Footer */
-        footer {
-            padding: 3rem 0 4rem;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .footer-links a {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.75rem;
-            color: var(--text-secondary);
+            color: #2c3e50;
             text-decoration: none;
         }
 
-        .footer-links a:hover {
-            color: var(--accent);
+        .project-link:hover {
             text-decoration: underline;
         }
 
-        .copyright {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.7rem;
-            color: var(--text-secondary);
-        }
-
-        /* Responsive */
+        /* Mobile responsiveness */
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
+            body {
+                height: auto;
+                overflow: auto;
             }
 
-            .tagline {
-                font-size: 1.2rem;
-            }
-
-            header {
-                padding: 4rem 0 2rem;
-            }
-
-            .project-card {
-                padding: 1.5rem;
-            }
-
-            .footer-content {
+            .top-bar {
                 flex-direction: column;
-                text-align: center;
+                align-items: flex-start;
+                gap: 15px;
+                padding: 20px;
+            }
+
+            .main-content {
+                flex-direction: column;
+                height: auto;
+                padding: 20px;
+            }
+
+            .left-column {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .right-column {
+                flex: 1;
+            }
+
+            .project h2 {
+                font-size: 1.3rem;
+            }
+
+            .project-description {
+                font-size: 0.9rem;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="hero-badge">Applied AI Portfolio</div>
-            <h1>Anu Kumar </h1>
-            <p class="tagline">Building <strong>intelligent systems</strong> for pharma R&D, drug discovery, and clinical intelligence</p>
-        </header>
+    <div class="top-bar">
+        <div class="name-section">
+            <div class="name">Selected AI Projects</div>
+            <div class="subtitle">Anu P Kumar</div>
+        </div>
+        <div class="contact">
+            <a href="mailto:your.email@example.com">Email</a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+        </div>
+    </div>
 
-        <main>
-            <div class="projects-header">
-                <h2>Selected Projects</h2>
-            </div>
-
-            <div class="projects-list">
-                <!-- Project 1 -->
-                <article class="project-card">
-                    <div class="project-number">01</div>
-                    <h3>Multi-Agent Competitive Intelligence Platform for Pharma R&D</h3>
-                    <p>Designing a multi-agent system to monitor, synthesize, and reason over competitive intelligence signals across clinical trials, publications, and market activity. Enables real-time strategic insights for pharmaceutical research and development teams.</p>
-                    <div class="tech-tags">
-                        <span class="tag">Multi-Agent AI</span>
-                        <span class="tag pharma">Pharma R&D</span>
-                        <span class="tag">RAG</span>
-                        <span class="tag">Knowledge Graphs</span>
-                    </div>
-                    <a href="#" class="view-details">View details</a>
-                </article>
-
-                <!-- Project 2 -->
-                <article class="project-card">
-                    <div class="project-number">02</div>
-                    <h3>AI-Augmented Target Ideation for Neurological Drug Discovery</h3>
-                    <p>Built an agentic AI system with retrieval-augmented generation over biomedical knowledge graphs to synthesize clinical evidence, analyze literature, and support neurological drug–target discovery. Accelerates hypothesis generation and validation in complex disease spaces.</p>
-                    <div class="tech-tags">
-                        <span class="tag">Agentic AI</span>
-                        <span class="tag pharma">Drug Discovery</span>
-                        <span class="tag">Knowledge Graphs</span>
-                        <span class="tag">RAG</span>
-                        <span class="tag ml">Biomedical NLP</span>
-                    </div>
-                    <a href="#" class="view-details">View details</a>
-                </article>
-
-                <!-- Project 3 -->
-                <article class="project-card">
-                    <div class="project-number">03</div>
-                    <h3>Neuropsychiatry Drug Recommendation & Causal Impact Analysis</h3>
-                    <p>Designed propensity-based, gradient-boosted recommender systems and quantified causal lift using prospective A/B testing and out-of-time backtesting. Improved drug reach and conversion through data-driven commercial strategy optimization.</p>
-                    <div class="tech-tags">
-                        <span class="tag ml">Recommender Systems</span>
-                        <span class="tag">Causal Inference</span>
-                        <span class="tag pharma">Commercial Analytics</span>
-                        <span class="tag ml">Gradient Boosting</span>
-                    </div>
-                    <a href="#" class="view-details">View details</a>
-                </article>
-
-                <!-- Project 4 -->
-                <article class="project-card">
-                    <div class="project-number">04</div>
-                    <h3>NLP-Driven Employee Survey Intelligence Platform</h3>
-                    <p>Built an end-to-end NLP pipeline using topic modeling and supervised learning to analyze employee survey data at scale. Standardized insight delivery and supported HR decision-making through automated sentiment and theme extraction.</p>
-                    <div class="tech-tags">
-                        <span class="tag ml">NLP</span>
-                        <span class="tag">Topic Modeling</span>
-                        <span class="tag">Sentiment Analysis</span>
-                        <span class="tag">MLOps</span>
-                    </div>
-                    <a href="#" class="view-details">View details</a>
-                </article>
-
-                <!-- Project 5 -->
-                <article class="project-card">
-                    <div class="project-number">05</div>
-                    <h3>Time-Series Commercial Forecasting for Neurological Markets</h3>
-                    <p>Developed a scalable forecasting framework combining classical and ML/DL time-series models with statistical validation. Projected drug market share and supported commercial planning with probabilistic forecasts and uncertainty quantification.</p>
-                    <div class="tech-tags">
-                        <span class="tag ml">Time-Series</span>
-                        <span class="tag pharma">Commercial Forecasting</span>
-                        <span class="tag ml">Deep Learning</span>
-                        <span class="tag">Statistical Modeling</span>
-                    </div>
-                    <a href="#" class="view-details">View details</a>
-                </article>
-
-                <!-- Project 6 -->
-                <article class="project-card">
-                    <div class="project-number">06</div>
-                    <h3>Network-Based Drug Repurposing for Alzheimer's Disease</h3>
-                    <p>Built an end-to-end drug repurposing pipeline integrating network diffusion, Mendelian randomization, and graph topology analysis. Prioritized statistically validated FDA-approved candidates for neurodegenerative disease treatment.</p>
-                    <div class="tech-tags">
-                        <span class="tag pharma">Drug Repurposing</span>
-                        <span class="tag">Network Science</span>
-                        <span class="tag">Causal Inference</span>
-                        <span class="tag ml">Graph ML</span>
-                    </div>
-                    <a href="#" class="view-details">View details</a>
-                </article>
-
-                <!-- Project 7 -->
-                <article class="project-card">
-                    <div class="project-number">07</div>
-                    <h3>Multimodal ML for Female Autism Phenotype Discovery</h3>
-                    <p>Designed multimodal machine learning pipelines integrating behavioral and fMRI features to identify underrepresented female autism phenotypes. Improved diagnostic precision and early detection through advanced feature engineering and ensemble methods.</p>
-                    <div class="tech-tags">
-                        <span class="tag ml">Multimodal ML</span>
-                        <span class="tag">fMRI Analysis</span>
-                        <span class="tag ml">Feature Engineering</span>
-                        <span class="tag">Clinical AI</span>
-                    </div>
-                    <a href="#" class="view-details">View details</a>
-                </article>
-            </div>
-        </main>
-
-        <footer>
-            <div class="footer-content">
-                <div class="footer-links">
-                    <a href="https://github.com/ghiblidev" target="_blank">GitHub</a>
-                    <a href="mailto:anukumar.apk@gmail.com">Contact</a>
-                    <a href="https://www.linkedin.com/in/anu-p-kumar/" target="_blank">LinkedIn</a>
+    <div class="main-content">
+        <div class="left-column">
+            <div class="project">
+                <h2>Multi-Agent Competitive Intelligence Platform for Pharma R&D</h2>
+                <p class="project-description">Designing a multi-agent system to monitor, synthesize, and reason over competitive intelligence signals across clinical trials, publications, and market activity.</p>
+                <div class="tech-tags">
+                    <span class="tag">LangGraph</span>
+                    <span class="tag">Multi-Agent Systems</span>
+                    <span class="tag">RAG</span>
+                    <span class="tag">ClinicalTrials.gov API</span>
                 </div>
-                <div class="copyright">© 2025 Ghibli Dev</div>
+                <a href="#" class="project-link">View Project →</a>
             </div>
-        </footer>
+
+            <div class="project">
+                <h2>AI-Augmented Target Ideation for Neurological Drug Discovery</h2>
+                <p class="project-description">Built an agentic AI + RAG system over biomedical knowledge graphs to synthesize clinical evidence, analyze literature, and support neurological drug–target discovery.</p>
+                <div class="tech-tags">
+                    <span class="tag">RAG</span>
+                    <span class="tag">Knowledge Graphs</span>
+                    <span class="tag">Biomedical NLP</span>
+                    <span class="tag">Drug Discovery</span>
+                </div>
+                <a href="#" class="project-link">View Project →</a>
+            </div>
+
+            <div class="project">
+                <h2>Neuropsychiatry Drug Recommendation & Causal Impact Analysis</h2>
+                <p class="project-description">Designed propensity-based, gradient-boosted recommender systems and quantified causal lift using prospective A/B testing and out-of-time backtesting to improve drug reach and conversion.</p>
+                <div class="tech-tags">
+                    <span class="tag">Causal Inference</span>
+                    <span class="tag">Propensity Scoring</span>
+                    <span class="tag">XGBoost</span>
+                    <span class="tag">A/B Testing</span>
+                </div>
+                <a href="#" class="project-link">View Project →</a>
+            </div>
+
+            <div class="project">
+                <h2>NLP-Driven Employee Survey Intelligence Platform</h2>
+                <p class="project-description">Built an end-to-end NLP pipeline using topic modeling and supervised learning to analyze employee survey data, standardizing insight delivery and supporting HR decision-making.</p>
+                <div class="tech-tags">
+                    <span class="tag">NLP</span>
+                    <span class="tag">Topic Modeling</span>
+                    <span class="tag">Supervised Learning</span>
+                    <span class="tag">Text Analytics</span>
+                </div>
+                <a href="#" class="project-link">View Project →</a>
+            </div>
+        </div>
+
+        <div class="right-column">
+            <div class="project">
+                <h2>Time-Series Commercial Forecasting for Neurological Markets</h2>
+                <p class="project-description">Developed a scalable forecasting framework combining classical and ML/DL time-series models with statistical validation to project drug market share and support commercial planning.</p>
+                <div class="tech-tags">
+                    <span class="tag">Time-Series</span>
+                    <span class="tag">Prophet</span>
+                    <span class="tag">LSTM</span>
+                    <span class="tag">Statistical Validation</span>
+                </div>
+                <a href="#" class="project-link">View Project →</a>
+            </div>
+
+            <div class="project">
+                <h2>Network-Based Drug Repurposing for Alzheimer's Disease</h2>
+                <p class="project-description">Built an end-to-end drug repurposing pipeline integrating network diffusion, Mendelian randomization, and graph topology to prioritize statistically validated FDA-approved candidates.</p>
+                <div class="tech-tags">
+                    <span class="tag">Network Analysis</span>
+                    <span class="tag">Mendelian Randomization</span>
+                    <span class="tag">Graph Theory</span>
+                    <span class="tag">Drug Repurposing</span>
+                </div>
+                <a href="#" class="project-link">View Project →</a>
+            </div>
+
+            <div class="project">
+                <h2>Multimodal ML for Female Autism Phenotype Discovery</h2>
+                <p class="project-description">Designed multimodal ML pipelines integrating behavioral and fMRI features to identify underrepresented female autism phenotypes, improving diagnostic precision and early detection.</p>
+                <div class="tech-tags">
+                    <span class="tag">Multimodal ML</span>
+                    <span class="tag">fMRI</span>
+                    <span class="tag">Feature Integration</span>
+                    <span class="tag">Clinical ML</span>
+                </div>
+                <a href="#" class="project-link">View Project →</a>
+            </div>
+        </div>
     </div>
 </body>
 </html>
