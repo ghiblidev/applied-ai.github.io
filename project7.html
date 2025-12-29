@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimodal ML for Female Autism Phenotype Discovery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Crimson Pro', serif;
+            background: #ffffff;
+            color: #000000;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #000000;
+            text-decoration: none;
+            margin-bottom: 40px;
+            font-size: 16px;
+            border: 1px solid #000000;
+            padding: 8px 16px;
+            transition: all 0.2s;
+        }
+
+        .back-link:hover {
+            background: #000000;
+            color: #ffffff;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .status {
+            color: #2563eb;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.6em;
+            font-weight: 500;
+            margin-left: 12px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #666666;
+            margin-bottom: 40px;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 30px 0 15px 0;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 20px;
+        }
+
+        .tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            padding: 6px 12px;
+            background: #f5f5f5;
+            border: 1px solid #e5e5e5;
+            color: #000000;
+            white-space: nowrap;
+        }
+
+        .architecture-diagram {
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #e5e5e5;
+        }
+
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .metric-card {
+            border: 1px solid #e5e5e5;
+            padding: 20px;
+        }
+
+        .metric-value {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .metric-label {
+            font-size: 14px;
+            color: #666666;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+
+        .methodology-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .step-card {
+            border: 1px solid #e5e5e5;
+            padding: 20px;
+        }
+
+        .step-number {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 32px;
+            font-weight: 600;
+            opacity: 0.2;
+            margin-bottom: 10px;
+        }
+
+        .step-title {
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .step-description {
+            font-size: 14px;
+            color: #666666;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+            margin: 20px 0;
+        }
+
+        .feature-item {
+            border: 1px solid #e5e5e5;
+            padding: 12px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        strong {
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            .metrics {
+                grid-template-columns: 1fr;
+            }
+
+            .methodology-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Projects</a>
+
+        <h1>Multimodal ML for Female Autism Phenotype Discovery</h1>
+        <p class="subtitle">Addressing diagnostic disparities through statistically validated cross-diagnostic screening</p>
+
+        <div class="tags">
+	<!-- Core ML/Technical -->
+    <span class="tag">Machine Learning</span>
+    <span class="tag">Gradient Boosting</span>
+    <span class="tag">Feature Engineering</span>
+    <span class="tag">Cross-Validation</span>
+    <span class="tag">A/B Testing</span>
+    <span class="tag">Statistical Validation</span>
+    <span class="tag">Biomarker Discovery</span>
+    <span class="tag">Model Interpretability</span>
+    
+    <!-- Domain/Clinical -->
+    <span class="tag">Neuroimaging</span>
+    <span class="tag">Autism Research</span>
+    <span class="tag">Neurodevelopmental Disorders</span>
+    <span class="tag">Cross-Diagnostic Screening</span>
+    <span class="tag">Diagnostic Support</span>
+    <span class="tag">Misdiagnosis Detection</span>
+    
+    <!-- Neuroscience Methods -->
+    <span class="tag">Multimodal Analysis</span>
+    <span class="tag">Connectivity Analysis</span>
+    <span class="tag">Network Neuroscience</span>
+
+    
+    <!-- Statistical Methods -->
+    <span class="tag">Mann-Whitney U Test</span>
+    <span class="tag">T-Tests</span>
+
+        </div>
+
+        <div class="section">
+            <h2>Overview</h2>
+            <p>Female autism is significantly underdiagnosed and misdiagnosed in clinical practice, with females often presenting with different behavioral phenotypes than males. Traditional diagnostic approaches fail to capture female-specific patterns, leading to missed diagnoses or misclassification as ADHD, anxiety, or mood disorders.</p>
+            
+            <p>Designed and built statistically validated multimodal ML pipeline integrating behavioral demographics and resting-state fMRI connectivity features to identify autism biomarkers in females through A/B testing of feature modalities and connectivity networks. Applied trained model to cross-diagnostic screening of ADHD population to flag potential misdiagnosed cases.</p>
+
+            <div class="metrics">
+                <div class="metric-card">
+                    <div class="metric-value">157</div>
+                    <div class="metric-label">ABIDE Training Subjects</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">23</div>
+                    <div class="metric-label">Multimodal Features</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">2</div>
+                    <div class="metric-label">A/B Tests Conducted</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">20%</div>
+                    <div class="metric-label">ADHD Cases Flagged</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Methodology</h2>
+            
+            <div class="methodology-steps">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <div class="step-title">Data Acquisition</div>
+                    <div class="step-description">ABIDE dataset (157 females: 62 ASD, 95 TD) and ADHD-200 (59 females)</div>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <div class="step-title">Feature Engineering</div>
+                    <div class="step-description">23 multimodal features: demographics (4) + brain connectivity (19)</div>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <div class="step-title">A/B Testing</div>
+                    <div class="step-description">Systematic comparison of modalities and network configurations</div>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">04</div>
+                    <div class="step-title">Model Training</div>
+                    <div class="step-description">XGBoost with 5-fold cross-validation and biomarker validation</div>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">05</div>
+                    <div class="step-title">Cross-Diagnostic Screening</div>
+                    <div class="step-description">Applied to ADHD-200 dataset, flagging autism-signature cases</div>
+                </div>
+            </div>
+
+            <h3>Multimodal Feature Set</h3>
+            <p><strong>Demographics (4 features):</strong></p>
+            <ul>
+                <li>Age at scan</li>
+                <li>Full-scale IQ, Verbal IQ, Performance IQ</li>
+            </ul>
+
+            <p><strong>Brain Connectivity (19 features):</strong></p>
+            <div class="feature-grid">
+                <div class="feature-item">DMN Within-Network</div>
+                <div class="feature-item">Salience Network</div>
+                <div class="feature-item">Frontoparietal Network</div>
+                <div class="feature-item">Inter-Network Connectivity</div>
+                <div class="feature-item">Edge Density Metrics</div>
+                <div class="feature-item">Global Connectivity</div>
+            </div>
+
+            <h3>A/B Testing Framework</h3>
+            <p><strong>Test 1 - Feature Modality:</strong></p>
+            <ul>
+                <li>Condition A: Demographics only (4 features)</li>
+                <li>Condition B: Multimodal (demographics + connectivity, 23 features)</li>
+                <li>Statistical validation: Paired t-test + Wilcoxon signed-rank test</li>
+                <li>Result: No significant difference (p=0.60), validated multimodal selection</li>
+            </ul>
+
+            <p><strong>Test 2 - Network Scope:</strong></p>
+            <ul>
+                <li>Condition A: DMN features only</li>
+                <li>Condition B: Three networks (DMN + SN + FPN)</li>
+                <li>Statistical validation: Paired t-test + Wilcoxon signed-rank test</li>
+                <li>Result: No significant difference (p=0.63), validated three-network approach</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Architecture</h2>
+            <div class="architecture-diagram">
+                <svg viewBox="0 0 1000 400" xmlns="http://www.w3.org/2000/svg">
+                    <!-- ABIDE Data -->
+                    <rect x="20" y="50" width="160" height="80" fill="none" stroke="black" stroke-width="2"/>
+                    <text x="100" y="80" font-family="Crimson Pro" font-size="14" font-weight="600" text-anchor="middle">ABIDE Dataset</text>
+                    <line x1="20" y1="90" x2="180" y2="90" stroke="black" stroke-width="1"/>
+                    <text x="100" y="108" font-family="Crimson Pro" font-size="12" text-anchor="middle">157 Females</text>
+                    <text x="100" y="122" font-family="Crimson Pro" font-size="12" text-anchor="middle">62 ASD, 95 TD</text>
+                    
+                    <!-- Arrow 1 -->
+                    <line x1="180" y1="90" x2="220" y2="90" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+                    
+                    <!-- Feature Extraction -->
+                    <rect x="220" y="50" width="160" height="80" fill="none" stroke="black" stroke-width="2"/>
+                    <text x="300" y="75" font-family="Crimson Pro" font-size="14" font-weight="600" text-anchor="middle">Feature</text>
+                    <text x="300" y="92" font-family="Crimson Pro" font-size="14" font-weight="600" text-anchor="middle">Extraction</text>
+                    <line x1="220" y1="100" x2="380" y2="100" stroke="black" stroke-width="1"/>
+                    <text x="300" y="118" font-family="Crimson Pro" font-size="12" text-anchor="middle">23 Features</text>
+                    
+                    <!-- Arrow 2 -->
+                    <line x1="380" y1="90" x2="420" y2="90" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+                    
+                    <!-- A/B Testing -->
+                    <rect x="420" y="20" width="140" height="60" fill="none" stroke="black" stroke-width="2"/>
+                    <text x="490" y="45" font-family="Crimson Pro" font-size="13" font-weight="600" text-anchor="middle">Test 1: Modality</text>
+                    <text x="490" y="65" font-family="Crimson Pro" font-size="11" text-anchor="middle">Demographics vs Multimodal</text>
+                    
+                    <rect x="420" y="100" width="140" height="60" fill="none" stroke="black" stroke-width="2"/>
+                    <text x="490" y="125" font-family="Crimson Pro" font-size="13" font-weight="600" text-anchor="middle">Test 2: Networks</text>
+                    <text x="490" y="145" font-family="Crimson Pro" font-size="11" text-anchor="middle">DMN vs 3 Networks</text>
+                    
+                    <!-- Convergence lines -->
+                    <line x1="560" y1="50" x2="600" y2="90" stroke="black" stroke-width="2"/>
+                    <line x1="560" y1="130" x2="600" y2="90" stroke="black" stroke-width="2"/>
+                    
+                    <!-- Model Training -->
+                    <rect x="600" y="50" width="140" height="80" fill="none" stroke="black" stroke-width="2"/>
+                    <text x="670" y="80" font-family="Crimson Pro" font-size="14" font-weight="600" text-anchor="middle">XGBoost</text>
+                    <text x="670" y="97" font-family="Crimson Pro" font-size="14" font-weight="600" text-anchor="middle">Training</text>
+                    <line x1="600" y1="100" x2="740" y2="100" stroke="black" stroke-width="1"/>
+                    <text x="670" y="118" font-family="Crimson Pro" font-size="11" text-anchor="middle">5-Fold CV</text>
+                    
+                    <!-- Arrow 3 -->
+                    <line x1="740" y1="90" x2="780" y2="90" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+                    
+                    <!-- Trained Model -->
+                    <rect x="780" y="50" width="140" height="80" fill="none" stroke="black" stroke-width="2"/>
+                    <text x="850" y="80" font-family="Crimson Pro" font-size="14" font-weight="600" text-anchor="middle">Trained Model</text>
+                    <line x1="780" y1="90" x2="920" y2="90" stroke="black" stroke-width="1"/>
+                    <text x="850" y="108" font-family="Crimson Pro" font-size="11" text-anchor="middle">Biomarker Panel</text>
+                    <text x="850" y="122" font-family="Crimson Pro" font-size="11" text-anchor="middle">Feature Importance</text>
+                    
+                    <!-- Arrow down to ADHD -->
+                    <line x1="850" y1="130" x2="850" y2="170" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+                    
+                    <!-- ADHD Screening -->
+                    <rect x="780" y="170" width="140" height="100" fill="none" stroke="black" stroke-width="2"/>
+                    <text x="850" y="200" font-family="Crimson Pro" font-size="14" font-weight="600" text-anchor="middle">ADHD-200</text>
+                    <text x="850" y="217" font-family="Crimson Pro" font-size="14" font-weight="600" text-anchor="middle">Screening</text>
+                    <line x1="780" y1="220" x2="920" y2="220" stroke="black" stroke-width="1"/>
+                    <text x="850" y="238" font-family="Crimson Pro" font-size="11" text-anchor="middle">59 Females Scored</text>
+                    <text x="850" y="254" font-family="Crimson Pro" font-size="11" text-anchor="middle">20% Flagged</text>
+                    
+                    <!-- Results box -->
+                    <rect x="20" y="200" width="180" height="160" fill="none" stroke="black" stroke-width="2"/>
+                    <text x="110" y="225" font-family="Crimson Pro" font-size="14" font-weight="600" text-anchor="middle">Key Results</text>
+                    <line x1="20" y1="235" x2="200" y2="235" stroke="black" stroke-width="1"/>
+                    <text x="110" y="253" font-family="Crimson Pro" font-size="11" text-anchor="middle">Validated Pipeline</text>
+                    <text x="110" y="271" font-family="Crimson Pro" font-size="11" text-anchor="middle">5-Fold CV</text>
+                    <text x="110" y="289" font-family="Crimson Pro" font-size="11" text-anchor="middle">1 Validated Biomarker</text>
+                    <text x="110" y="307" font-family="Crimson Pro" font-size="11" text-anchor="middle">Cross-Diagnostic Success</text>
+                    <text x="110" y="325" font-family="Crimson Pro" font-size="11" text-anchor="middle">12 High-Risk Cases</text>
+                    <text x="110" y="343" font-family="Crimson Pro" font-size="11" text-anchor="middle">Top Score: 94%</text>
+                    
+                    <!-- Arrow marker definition -->
+                    <defs>
+                        <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="black"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Implementation</h2>
+            
+            <h3>Data Preprocessing</h3>
+            <p>Implemented robust data cleaning pipelines for ABIDE (Autism Brain Imaging Data Exchange) and ADHD-200 datasets. Handled missing values through median imputation for demographics and careful NaN cleaning for neuroimaging data. Extracted ROI timeseries from resting-state fMRI across multiple sites, harmonizing data from different scanner protocols and acquisition parameters.</p>
+
+            <h3>Feature Engineering</h3>
+            <p>Designed atlas-agnostic network-level connectivity features enabling seamless application across different neuroimaging parcellations. Extracted within-network connectivity metrics (mean, std, max) for Default Mode Network (DMN), Salience Network (SN), and Frontoparietal Network (FPN). Computed inter-network connectivity patterns and graph theory metrics including edge density and node degree distributions.</p>
+
+            <h3>Statistical Validation</h3>
+            <p>Implemented comprehensive A/B testing framework with paired statistical tests (t-test + Wilcoxon signed-rank) to systematically compare feature modalities and network configurations. Validated biomarker candidates using Mann-Whitney U tests (p < 0.05) with effect size calculations (Cohen's d). Prioritized scientific rigor over performance optimization, ensuring reproducible and clinically meaningful results.</p>
+
+            <h3>Model Training & Validation</h3>
+            <p>Trained XGBoost classifier selected for interpretable feature importance metrics and built-in regularization to prevent overfitting on small sample (N=157). Employed stratified 5-fold cross-validation to ensure robust performance estimation across different data partitions. Extracted feature importance rankings and validated top biomarkers through independent statistical tests.</p>
+
+            <h3>Cross-Diagnostic Application</h3>
+            <p>Applied trained model to ADHD-200 dataset, extracting identical 23-feature set from independent neuroimaging data processed with different atlas (ROI 1000 vs CC200). Generated autism probability scores for each subject, ranking by likelihood and flagging top 20% as high-risk cases exhibiting autism-signature patterns warranting clinical review.</p>
+        </div>
+
+        <div class="section">
+            <h2>Key Technical Decisions</h2>
+
+            <h3>01 — Atlas-Agnostic Network Features</h3>
+            <p>Designed network-level connectivity features (DMN, SN, FPN) that generalize across different brain parcellations, enabling successful transfer from ABIDE's CC200 atlas (200 ROIs) to ADHD-200's ROI 1000 atlas (1000 ROIs) without model retraining. This architectural choice prioritized cross-dataset applicability over atlas-specific optimization.</p>
+
+            <h3>02 — Biomarker-Based Approach</h3>
+            <p>Deliberately excluded diagnostic instruments (ADOS, ADI-R) from feature set despite their high predictive power to avoid data leakage and enable true biomarker discovery. This decision prioritized scientific validity and cross-diagnostic applicability over performance metrics, as diagnostic instruments are unavailable in non-autism populations.</p>
+
+            <h3>03 — Statistical Rigor Over Performance</h3>
+            <p>Implemented comprehensive statistical validation (A/B testing, cross-validation, biomarker validation) rather than aggressive hyperparameter tuning. Accepted realistic performance metrics while ensuring reproducible methodology and honest reporting of results, contributing to more reliable medical machine learning practices.</p>
+        </div>
+
+        <div class="section">
+            <h2>Results</h2>
+            <div class="metrics">
+                <div class="metric-card">
+                    <div class="metric-value">23</div>
+                    <div class="metric-label">Multimodal Features</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">1</div>
+                    <div class="metric-label">Validated Biomarker</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">20%</div>
+                    <div class="metric-label">ADHD Cases Flagged</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">94%</div>
+                    <div class="metric-label">Top Autism Probability</div>
+                </div>
+            </div>
+
+            <p>Successfully developed statistically validated multimodal ML pipeline through rigorous A/B testing framework. Validated pipeline through 5-fold cross-validation, demonstrating reproducible results across training folds while maintaining scientific rigor and avoiding overfitting.</p>
+
+            <p>Successfully applied pipeline to cross-diagnostic screening of ADHD-200 dataset, identifying 20% of subjects with autism-signature patterns warranting clinical review. Top-scoring cases exhibited autism probabilities of 94%, 92%, and 77%, demonstrating pipeline's capability for misdiagnosis identification in underrepresented populations.</p>
+
+            <p>Biomarker validation identified verbal IQ as statistically significant discriminator (p=0.03, Cohen's d=-0.37). A/B testing revealed no significant differences between modalities (p=0.60) or network configurations (p=0.63), validating selection of multimodal three-network approach based on neuroscientific rationale rather than performance optimization alone.</p>
+
+            <h3>Clinical Utility</h3>
+            <p>Pipeline generates interpretable autism probability scores suitable for clinical review, providing objective data to supplement diagnostic assessment. Identified 12 high-risk ADHD cases with concrete probabilities, enabling clinicians to prioritize subjects for comprehensive autism evaluation and potentially identify misdiagnosed individuals.</p>
+
+            <h3>Methodological Contributions</h3>
+            <p>Demonstrated feasibility of cross-diagnostic screening using autism-trained models on independent neurodevelopmental populations. Established reproducible A/B testing framework for feature selection validation. Contributed to honest reporting practices in medical ML by prioritizing scientific validity over inflated performance metrics.</p>
+        </div>
+
+        <div class="section">
+            <h2>Impact</h2>
+            <p>Developed data-driven approach to identify potential misdiagnosed cases in underrepresented female populations where traditional diagnostic pathways often fail. Pipeline provides objective, reproducible screening tool to supplement clinical assessment and address diagnostic disparities.</p>
+
+            <p>Demonstrated cross-diagnostic screening framework applicable to other neurodevelopmental populations, establishing methodology for identifying shared phenotypic patterns across diagnostic categories. This approach enables systematic flagging of cases for clinical re-evaluation and potential diagnostic revision.</p>
+
+            <p>Implemented comprehensive statistical validation framework establishing best practices for medical ML research. Prioritized reproducibility and scientific rigor over performance metrics, contributing to more reliable and clinically meaningful machine learning applications in healthcare.</p>
+        </div>
+
+        <div class="section">
+            <h2>Future Directions</h2>
+            <ul>
+                <li>Scale to larger multi-site datasets (ABCD, HBN) with thousands of subjects to improve model robustness and generalizability</li>
+                <li>Expand to mood disorder populations (depression, anxiety) pending access to datasets with comprehensive phenotypic and neuroimaging data</li>
+                <li>Incorporate task-based fMRI features (social cognition, emotion processing) to complement resting-state connectivity patterns</li>
+                <li>Conduct prospective clinical validation studies comparing flagged cases against expert diagnoses to measure real-world screening accuracy</li>
+                <li>Develop explainability tools for clinical integration, enabling interpretable feature contributions at individual subject level</li>
+            </ul>
+        </div>
+
+        <a href="index.html" class="back-link">← Back to Projects</a>
+    </div>
+</body>
+</html>

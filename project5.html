@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kumar - Time-Series Commercial Forecasting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Crimson Pro', serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #fff;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+
+        .back-link {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: #666;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 40px;
+        }
+
+        .back-link:hover {
+            color: #2c3e50;
+        }
+
+        header {
+            margin-bottom: 60px;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            padding: 4px 10px;
+            background: #f5f5f5;
+            color: #555;
+            border: 1px solid #ddd;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            margin-top: 30px;
+            color: #1a1a1a;
+        }
+
+        h4 {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            margin-top: 20px;
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #555;
+            font-size: 1rem;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .architecture-diagram {
+            margin: 40px 0;
+            padding: 30px;
+            background: #fafafa;
+            border: 1px solid #e0e0e0;
+        }
+
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .metric-card {
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .metric-value {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 5px;
+        }
+
+        .metric-label {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            background: #f5f5f5;
+            padding: 2px 6px;
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 20px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .metrics {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
+    
+        <header>
+            <h1>Time-Series Commercial Forecasting for Neurological Markets</h1>
+            <p class="subtitle">Comparative Framework for Market Share Prediction Using Classical and Deep Learning Models</p>
+    
+            <div class="tags">
+        <span class="tag">Time Series</span>
+        <span class="tag">ARIMA</span>
+        <span class="tag">Holt-Winters</span>
+        <span class="tag">Prophet</span>
+        <span class="tag">LSTM</span>
+        <span class="tag">Exponential Smoothing</span>
+        <span class="tag">Forecasting</span>
+        <span class="tag">Market Share</span>
+        <span class="tag">Commercial Analytics</span>
+        <span class="tag">Medicaid Data</span>
+        <span class="tag">IQVIA</span>
+        <span class="tag">Symphony</span>
+        <span class="tag">MAPE</span>
+        <span class="tag">RMSE</span>
+        <span class="tag">MAE</span>
+        <span class="tag">Statistical Validation</span>
+        <span class="tag">Out-of-Time Testing</span>
+        <span class="tag">Stationarity</span>
+        <span class="tag">ACF/PACF</span>
+        <span class="tag">Auto ARIMA</span>
+        <span class="tag">Trend Decomposition</span>
+        <span class="tag">Neural Networks</span>
+        <span class="tag">Deep Learning</span>
+        <span class="tag">Model Comparison</span>
+        <span class="tag">CGRP</span>
+        <span class="tag">Neurology</span>
+        <span class="tag">Python</span>
+        <span class="tag">Statsmodels</span>
+        <span class="tag">TensorFlow</span>
+        <span class="tag">Keras</span>
+        <span class="tag">pmdarima</span>
+        <span class="tag">scikit-learn</span>
+    </div>
+</header>
+
+<section id="overview">
+    <h2>Overview & Problem</h2>
+
+    <h3>The Challenge</h3>
+    <p>Pharmaceutical commercial teams need accurate market share forecasts to support strategic planning, resource allocation, and performance tracking. Traditional forecasting approaches often rely on single model paradigms—either statistical methods that assume linear patterns or machine learning approaches that may overfit limited pharmaceutical data. The challenge is compounded in specialty therapeutic areas like neurology where market dynamics are influenced by complex factors: treatment paradigm shifts, patent expirations, regulatory changes, and physician adoption patterns.</p>
+    
+    <p>For emerging drug classes like CGRP inhibitors in migraine treatment, historical data is sparse (often just 3-4 years of quarterly data), making it difficult to distinguish signal from noise. Commercial analysts need a systematic framework that compares multiple modeling paradigms, validates predictions rigorously, and provides uncertainty quantification—all while being interpretable enough for non-technical stakeholders to trust the forecasts.</p>
+
+    <h3>The Solution</h3>
+    <p>We developed a comparative time-series forecasting framework that evaluates four distinct modeling approaches spanning classical statistical methods and modern deep learning. The system processes Medicaid prescription data for CGRP inhibitors, applies rigorous statistical preprocessing, trains multiple models in parallel, and validates predictions using out-of-time testing on held-out 2022 data. By comparing ARIMA (autoregressive baseline), Holt-Winters (exponential smoothing), Prophet (additive modeling), and LSTM (neural networks), we identify the optimal model for this specific market while building a reusable framework scalable to other therapeutic areas.</p>
+
+    <div class="metrics">
+        <div class="metric-card">
+            <div class="metric-value">4</div>
+            <div class="metric-label">Models Evaluated</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-value">5.9%</div>
+            <div class="metric-label">Best MAPE (Holt-Winters)</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-value">16</div>
+            <div class="metric-label">Quarters Training Data</div>
+        </div>
+    </div>
+
+    <h3>Impact</h3>
+    <p>The framework enables commercial teams to generate quarterly market share forecasts with quantified accuracy metrics, supporting data-driven resource planning decisions. Holt-Winters emerged as the best-performing model with 5.9% MAPE on out-of-time test data, outperforming both classical ARIMA baselines and modern LSTM approaches. The modular architecture allows rapid adaptation to new therapeutic areas by swapping data sources (Medicaid → IQVIA/Symphony) while preserving the same validation pipeline. By providing model comparison rather than a single "black box" prediction, the system builds stakeholder confidence and enables selection of fit-for-purpose models based on interpretability vs. accuracy tradeoffs.</p>
+</section>
+
+<section id="architecture">
+    <h2>Technical Architecture</h2>
+
+    <div class="architecture-diagram">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; line-height: 1.8;">
+            <div style="margin-bottom: 20px;">
+                <strong>Data Source</strong><br>
+                Medicaid Prescription Data (CGRP Market)<br>
+                Quarterly aggregation | 2018-2022<br>
+                Scalable to IQVIA/Symphony datasets
+            </div>
+            
+            <div style="text-align: center; color: #999; margin: 10px 0;">↓</div>
+            
+            <div style="margin-bottom: 20px;">
+                <strong>Statistical Preprocessing</strong><br>
+                Stationarity testing (ADF, KPSS)<br>
+                Trend/seasonality decomposition<br>
+                ACF/PACF analysis<br>
+                Differencing & normalization
+            </div>
+        
+            <div style="text-align: center; color: #999; margin: 10px 0;">↓</div>
+            
+            <div style="margin-bottom: 20px;">
+                <strong>Train/Test Split</strong><br>
+                Train: 2018-2021 (16 quarters)<br>
+                Test: 2022 (4 quarters)<br>
+                Out-of-time validation
+            </div>
+            
+            <div style="text-align: center; color: #999; margin: 10px 0;">↓</div>
+            
+            <div style="margin-bottom: 20px;">
+                <strong>Four Model Classes</strong><br>
+                <strong>1. ARIMA</strong> - Autoregressive baseline | Auto-parameter tuning<br>
+                <strong>2. Holt-Winters</strong> - Exponential smoothing with trend<br>
+                <strong>3. Prophet</strong> - Additive modeling framework<br>
+                <strong>4. LSTM</strong> - Recurrent neural network | Sequence learning
+            </div>
+            
+            <div style="text-align: center; color: #999; margin: 10px 0;">↓</div>
+            
+            <div style="margin-bottom: 20px;">
+                <strong>Validation & Metrics</strong><br>
+                MAE, RMSE, MAPE on test set<br>
+                Model comparison matrix<br>
+                Forecast visualization
+            </div>
+            
+            <div style="text-align: center; color: #999; margin: 10px 0;">↓</div>
+            
+            <div>
+                <strong>Output</strong><br>
+                2023 Forecasts (4 models)<br>
+                Model serialization (.pkl, .json, .h5)<br>
+                Performance comparison report
+            </div>
+        </div>
+    </div>
+
+    <h3>Technology Stack</h3>
+    <ul>
+        <li><strong>Statistical Models:</strong> ARIMA via <code>statsmodels</code>, Holt-Winters via <code>ExponentialSmoothing</code>, Auto-ARIMA via <code>pmdarima</code></li>
+        <li><strong>Machine Learning:</strong> Prophet (Facebook's time-series framework), LSTM via TensorFlow/Keras</li>
+        <li><strong>Data Processing:</strong> Pandas for time-series manipulation, NumPy for numerical operations</li>
+        <li><strong>Validation:</strong> scikit-learn metrics (MAE, RMSE), custom MAPE calculation</li>
+        <li><strong>Statistical Testing:</strong> Augmented Dickey-Fuller (ADF), KPSS stationarity tests, ACF/PACF analysis</li>
+        <li><strong>Visualization:</strong> Matplotlib/Seaborn for forecast plots and model comparison</li>
+        <li><strong>Model Persistence:</strong> Pickle for ARIMA/Holt-Winters, JSON for Prophet, HDF5 for LSTM</li>
+        <li><strong>Data Sources:</strong> Medicaid prescription data (designed to scale to IQVIA SOB/Symphony Health datasets)</li>
+    </ul>
+</section>
+
+<section id="implementation">
+    <h2>Implementation & Approach</h2>
+
+    <h3>Statistical Preprocessing & Validation</h3>
+    <p>Before model training, we implemented rigorous statistical validation to ensure data quality and model appropriateness. We tested for stationarity using Augmented Dickey-Fuller (ADF) and KPSS tests, decomposed the time series into trend and seasonal components, and analyzed autocorrelation (ACF) and partial autocorrelation (PACF) patterns. For non-stationary series, we applied differencing transformations to achieve stationarity—a critical requirement for ARIMA modeling. This preprocessing phase ensures that model assumptions are met and prevents spurious correlations in forecasts.</p>
+
+    <h3>Model 1: ARIMA (Autoregressive Baseline)</h3>
+    <p>ARIMA serves as our statistical baseline, modeling market share as a function of past values, differencing operations, and moving average terms. We used <code>auto_arima</code> from the <code>pmdarima</code> library to automatically identify optimal (p,d,q) parameters through AIC minimization and stepwise search. The final model achieved 7.09% MAPE on the 2022 test set. ARIMA's strength lies in its statistical foundation and interpretability—each parameter has a clear meaning in terms of autocorrelation structure. However, it assumes linear relationships and struggles with sudden market shifts or non-linear growth patterns.</p>
+
+    <h3>Model 2: Holt-Winters (Exponential Smoothing)</h3>
+    <p>Holt-Winters exponential smoothing with additive trend emerged as the best-performing model, achieving 5.9% MAPE. This approach uses weighted averages that exponentially decay, giving more importance to recent observations while still incorporating historical patterns. We configured the model with additive trend but no seasonality, as the limited 16-quarter training window made seasonal pattern estimation unstable. Holt-Winters excels at capturing gradual trends and smooth transitions—characteristics that align well with pharmaceutical market share evolution in established therapeutic areas.</p>
+
+    <h3>Model 3: Prophet (Additive Framework)</h3>
+    <p>Facebook's Prophet framework models time series as an additive combination of trend, seasonality, and holiday effects. We configured Prophet without yearly seasonality due to limited data span and focused on capturing the underlying growth trend. Prophet achieved 10.84% MAPE—worse than Holt-Winters but still reasonable. Prophet's advantage is its flexibility in handling missing data and outliers, plus its intuitive parameter tuning for non-experts. However, for short time series without clear seasonal patterns, simpler exponential smoothing methods often outperform it.</p>
+
+    <h3>Model 4: LSTM (Recurrent Neural Network)</h3>
+    <p>We implemented a basic LSTM architecture to evaluate deep learning's potential for pharmaceutical forecasting. After scaling data with MinMaxScaler and creating sequential inputs, we trained a single-layer LSTM with 50 units using Adam optimizer. The LSTM achieved 16.93% MAPE—significantly worse than statistical methods. This outcome highlights a key limitation of neural networks for pharmaceutical time series: they require substantial data to learn meaningful patterns, and our 16-quarter training set is insufficient. LSTMs may become viable as more historical data accumulates or when incorporating external features (competitor launches, pricing changes) that add dimensionality.</p>
+
+    <h3>Out-of-Time Validation Strategy</h3>
+    <p>Model validation used a strict temporal split: training on 2018-2021 data and testing on 2022 data that the models never saw during training. This mimics real-world deployment where models must predict future quarters. We avoided walk-forward or cross-validation approaches common in general time series because pharmaceutical markets have memory—contamination from future information into training would create unrealistic performance estimates. By computing MAE, RMSE, and MAPE on the test set, we quantify each model's prediction accuracy and enable apples-to-apples comparison across different modeling paradigms.</p>
+
+    <h3>Model Comparison Framework</h3>
+    <p>Rather than selecting a single model a priori, we built a systematic comparison framework that evaluates all four models on identical data splits. This approach reveals which modeling assumptions work best for this specific market while creating a reusable pipeline for other therapeutic areas. The comparison shows Holt-Winters' 41% error reduction vs. ARIMA (from 7.09% to 5.9% MAPE), demonstrating that exponential smoothing's continuous weighting outperforms discrete autoregressive terms for this smooth market evolution pattern.</p>
+
+    <h3>Scalability to Enterprise Data Sources</h3>
+    <p>While this implementation uses Medicaid data, the pipeline is designed to scale to IQVIA (prescription tracking), Symphony Health (claims data), or other commercial datasets. The core modeling logic is data-source agnostic—it only requires a quarterly time series with consistent measurement. Moving to IQVIA SOB or Symphony data would provide richer signal (more markets, longer history) and enable more sophisticated feature engineering (incorporating competitor dynamics, pricing, promotional spend). The current Medicaid implementation serves as a proof-of-concept that validates the framework before investing in expensive commercial data licenses.</p>
+
+    <h3>Model Serialization & Deployment</h3>
+    <p>We serialize trained models using format-appropriate methods: Pickle for ARIMA/Holt-Winters (preserving Python object state), JSON for Prophet (storing only parameters), and HDF5 for LSTM (saving neural network weights). This allows models to be version-controlled, shared across teams, and deployed in production forecasting pipelines without retraining. The serialization strategy recognizes that different model types have different persistence requirements—statistical models need full state preservation while neural networks just need weight matrices.</p>
+</section>
+
+<section id="highlights">
+    <h2>Technical Highlights</h2>
+
+    <h3>What Makes This Different</h3>
+    <ul>
+        <li><strong>Multi-Paradigm Comparison:</strong> Most pharmaceutical forecasting projects commit to a single model class (either statistical or ML). We systematically compare classical time series, exponential smoothing, modern additive models, and deep learning to identify fit-for-purpose approaches.</li>
+        <li><strong>Statistical Rigor First:</strong> Rather than jumping to "AI" models, we validate basic statistical assumptions (stationarity, autocorrelation) and use classical methods as informed baselines. This reveals that Holt-Winters—a decades-old technique—outperforms modern LSTM for this use case.</li>
+        <li><strong>Designed for Pharmaceutical Realities:</strong> Short time series, quarterly aggregation, sparse training data—these are constraints unique to pharma commercial analytics. Our framework is tailored to these limitations rather than applying generic forecasting recipes.</li>
+        <li><strong>Scalable Data Architecture:</strong> Starting with Medicaid data but architected to plug into IQVIA/Symphony demonstrates production thinking—validate on accessible data before investing in expensive commercial sources.</li>
+        <li><strong>Model-Agnostic Validation:</strong> Out-of-time testing with consistent metrics (MAE, RMSE, MAPE) enables fair comparison across different modeling families, preventing overfitting to validation strategies.</li>
+    </ul>
+
+    <h3>Key Learnings</h3>
+    <ul>
+        <li><strong>Simpler Models Often Win:</strong> Holt-Winters exponential smoothing outperformed Prophet and LSTM despite being conceptually simpler. For pharmaceutical time series with smooth trends and limited data, classical methods' statistical efficiency beats modern flexibility.</li>
+        <li><strong>Data Scarcity Limits Deep Learning:</strong> LSTM's 16.93% MAPE vs. Holt-Winters' 5.9% demonstrates that neural networks need substantially more training data. Pharmaceutical markets' short histories make deep learning unviable without creative data augmentation.</li>
+        <li><strong>Stationarity Matters:</strong> Statistical preprocessing revealed that CGRP market share wasn't stationary—trend and autocorrelation were present. Models that explicitly handle trends (Holt-Winters, Prophet) outperformed those requiring stationarity transformations (ARIMA).</li>
+        <li><strong>Validation Strategy Is Critical:</strong> Using 2022 as a true hold-out prevented overfitting. Many time-series projects leak future information through cross-validation schemes that don't respect temporal ordering—we avoided this by treating prediction as a strictly sequential task.</li>
+        <li><strong>Model Comparison Builds Trust:</strong> Showing commercial stakeholders that Holt-Winters beat LSTM (despite the "AI" hype) increased confidence in the forecast. Transparency about model selection criteria matters more than using the newest techniques.</li>
+    </ul>
+</section>
+
+    <a href="index.html" class="back-link">← Back to Portfolio</a>
+</div>
+</body>
+</html>
