@@ -271,68 +271,10 @@
             <h2>Two-Phase NLP Pipeline Architecture</h2>
 
             <div class="architecture-diagram">
-                <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; line-height: 1.8;">
-                    <div style="margin-bottom: 20px;">
-                        <strong>Employee Survey Responses</strong><br>
-                        6,000+ responses
-                    </div>
-                    
-                    <div style="text-align: center; color: #999; margin: 10px 0;">↓</div>
-                    
-                    <div style="margin-bottom: 20px;">
-                        <strong>PHASE 1: UNSUPERVISED TOPIC DISCOVERY</strong>
-                    </div>
-                    
-                    <div style="margin-bottom: 20px; padding-left: 20px;">
-                        NLTK Preprocessing (4 configurable levels)
-                    </div>
-                    
-                    <div style="text-align: center; color: #999; margin: 10px 0;">↓</div>
-                    
-                    <div style="margin-bottom: 20px; padding-left: 20px;">
-                        <strong>LDA</strong> (scikit-learn) | <strong>BERTopic</strong> (Transformers)
-                    </div>
-                    
-                    <div style="text-align: center; color: #999; margin: 10px 0;">↓</div>
-                    
-                    <div style="margin-bottom: 20px; padding-left: 20px;">
-                        Topic Extraction + Coherence Metrics
-                    </div>
-                    
-                    <div style="margin-bottom: 20px; padding-left: 20px;">
-                        <strong>Discovered Topics:</strong><br>
-                        Career Development | Internal Mobility<br>
-                        Mentoring Support | Communication
-                    </div>
-                    
-                    <div style="text-align: center; color: #999; margin: 10px 0;">↓</div>
-                    
-                    <div style="margin-bottom: 20px;">
-                        <strong>PHASE 2: SUPERVISED CLASSIFICATION</strong>
-                    </div>
-                    
-                    <div style="margin-bottom: 20px; padding-left: 20px;">
-                        <strong>nli-mpnet</strong> (Weight: 0.71, Cosine Similarity)<br>
-                        <strong>stsb-mpnet</strong> (Weight: 0.71, Cosine Similarity)<br>
-                        <strong>nli-roberta</strong> (Weight: 0.69, Cosine Similarity)
-                    </div>
-                    
-                    <div style="text-align: center; color: #999; margin: 10px 0;">↓</div>
-                    
-                    <div style="margin-bottom: 20px;">
-                        <strong>Weighted Ensemble</strong>
-                    </div>
-                    
-                    <div style="text-align: center; color: #999; margin: 10px 0;">↓</div>
-                    
-                    <div>
-                        <strong>Actionable Insights</strong><br>
-                        Top 3 Topics per Response<br>
-                        Confidence Scores<br>
-                        HR Interventions
-                    </div>
-                </div>
-            </div>
+    <img src="images/project4_architecture.png" 
+         alt="NLP Pipeline for Employee Survey Intelligence Platform" 
+         style="width: 100%; max-width: 1200px; margin: 0 auto; display: block;">
+</div>
         </section>
 
         <section id="implementation">
